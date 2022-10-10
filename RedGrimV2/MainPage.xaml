@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RedGrimV2"
+             x:Class="RedGrimV2.MainPage"
+             Title="">
+
+    <Grid Padding="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width=".25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="2" Grid.RowSpan="3" BackgroundColor="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <Frame Grid.RowSpan="3" HorizontalOptions="FillAndExpand" BorderColor="Transparent" BackgroundColor="Transparent" CornerRadius="2" Margin="1"/>
+            <ImageButton x:Name="btnDashboard" Grid.Row="0" HorizontalOptions="FillAndExpand" Margin="15" Source="gauge.png" BackgroundColor="Transparent"/>
+            <ImageButton x:Name="btnSwitchPanel" Grid.Row="1" HorizontalOptions="FillAndExpand" Margin="15" Source="flash.png" BackgroundColor="Transparent"/>
+            <ImageButton x:Name="btnSettings" Grid.Row="2" HorizontalOptions="FillAndExpand" Margin="15" Source="settings.png" CornerRadius="10" BackgroundColor="Transparent" Clicked="btnSettings_Clicked"/>
+        </Grid>
+
+        <local:DashBoardView x:Name="DashBoardPanel" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <local:SwitchPanelView x:Name="SwitchPanel" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <local:SettingsView x:Name="SettingsPage" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsVisible="False"/>
+
+
+        <!--<StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" Padding="5" HorizontalOptions="CenterAndExpand" Spacing="50">
+            <Button/>
+            <Button/>
+            <Button/>
+        </StackLayout>-->
+        
+
+    </Grid>
+
+    <!--<ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="10,0"
+            VerticalOptions="StartAndExpand">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Welcome to .NET Multi-platform App UI X"
+                SemanticProperties.HeadingLevel="Level1"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>-->
+
+</ContentPage>

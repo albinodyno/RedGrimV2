@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RedGrimV2.DashBoardView">
+    
+    <Grid x:Name="grdGauges" Margin="3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height=".15*"/>
+        </Grid.RowDefinitions>
+
+
+        <Frame Grid.Column="0" Grid.Row="0" BorderColor="Cyan" CornerRadius="5" Margin="5">
+            
+        </Frame>
+
+        <Frame Grid.Column="1" Grid.Row="0" BorderColor="Cyan" CornerRadius="5" Margin="5">
+
+        </Frame>
+
+        <Frame Grid.Column="0" Grid.Row="1" BorderColor="Cyan" CornerRadius="5" Margin="5">
+
+        </Frame>
+
+        <Frame Grid.Column="1" Grid.Row="1" BorderColor="Cyan" CornerRadius="5" Margin="5">
+
+        </Frame>
+
+        <Button  Grid.Row="2" Grid.Column="0" Text="BT Settings" BorderColor="Magenta" CornerRadius="5" BorderWidth="1" TextColor="Magenta" FontSize="12" Background="Transparent" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="1"/>
+        <Button  Grid.Row="2" Grid.Column="1" Text="Not Connected" BorderColor="OrangeRed" CornerRadius="5" BorderWidth="1" TextColor="White" FontSize="12" Background="Transparent" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="1"/>
+
+    </Grid>
+</ContentView>

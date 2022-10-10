@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RedGrimV2.SwitchPanelView">
+
+    <Grid Margin="3" Padding="3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height=".15*"/>
+        </Grid.RowDefinitions>
+
+
+        <!--Button Borders-->
+        <Frame x:Name="bdr1" Grid.Row="0" Grid.Column="0" BorderColor="LightGray" Background="Black" CornerRadius="5" Margin="5"/>
+        <Frame x:Name="bdr2" Grid.Row="0" Grid.Column="1" BorderColor="LightGray" Background="Black" CornerRadius="5" Margin="5"/>
+        <Frame x:Name="bdr3" Grid.Row="1" Grid.Column="0" BorderColor="LightGray" Background="Black" CornerRadius="5" Margin="5"/>
+        <Frame x:Name="bdr4" Grid.Row="1" Grid.Column="1" BorderColor="LightGray" Background="Black" CornerRadius="5" Margin="5"/>
+
+        <!--On Buttons-->
+        <Button x:Name="btnAux1On" Grid.Row="0" Grid.Column="0" BackgroundColor="Transparent" TextColor="LightGray" Text="AUX 1" FontFamily="vdub" FontSize="Large" IsVisible="True" Clicked="btnAux1On_Clicked"/>
+        <Button x:Name="btnAux2On" Grid.Row="0" Grid.Column="1" BackgroundColor="Transparent" TextColor="LightGray" Text="AUX 2" FontFamily="vdub" FontSize="Large" IsVisible="True" Clicked="btnAux2On_Clicked"/>
+        <Button x:Name="btnAux3On" Grid.Row="1" Grid.Column="0" BackgroundColor="Transparent" TextColor="LightGray" Text="AUX 3" FontFamily="vdub" FontSize="Large" IsVisible="True" Clicked="btnAux3On_Clicked"/>
+        <Button x:Name="btnAux4On" Grid.Row="1" Grid.Column="1" BackgroundColor="Transparent" TextColor="LightGray" Text="AUX 4" FontFamily="vdub" FontSize="Large" IsVisible="True" Clicked="btnAux4On_Clicked"/>
+
+        <!--Off Buttons-->
+        <Button x:Name="btnAux1Off" Grid.Row="0" Grid.Column="0" Background="Transparent" TextColor="DarkGoldenrod" Text="\| AUX 1 |/" FontFamily="vdub" FontAttributes="Bold" FontSize="Large" IsVisible="False" Clicked="btnAux1Off_Clicked"/>
+        <Button x:Name="btnAux2Off" Grid.Row="0" Grid.Column="1" Background="Transparent" TextColor="DarkGoldenrod" Text="\| AUX 2 |/" FontFamily="vdub" FontAttributes="Bold" FontSize="Large" IsVisible="False" Clicked="btnAux2Off_Clicked"/>
+        <Button x:Name="btnAux3Off" Grid.Row="1" Grid.Column="0" Background="Transparent" TextColor="DarkGoldenrod" Text="\| AUX 3 |/" FontFamily="vdub" FontAttributes="Bold" FontSize="Large" IsVisible="False" Clicked="btnAux3Off_Clicked"/>
+        <Button x:Name="btnAux4Off" Grid.Row="1" Grid.Column="1" Background="Transparent" TextColor="DarkGoldenrod" Text="\| AUX 4 |/" FontFamily="vdub" FontAttributes="Bold" FontSize="Large" IsVisible="False" Clicked="btnAux4Off_Clicked"/>
+
+        <!--Aux Options-->
+        <Button x:Name="btnAuxEffects" Grid.Row="2" Grid.Column="0" Text="Effects" BorderColor="Magenta" CornerRadius="5" BorderWidth="1" TextColor="Magenta" FontSize="12" Background="Transparent" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Clicked="btnAuxEffects_Clicked" Margin="1"/>
+        <Button x:Name="btnAuxConnect" Grid.Row="2" Grid.Column="1" Text="AUX Connect" BorderColor="White" CornerRadius="5" BorderWidth="1" TextColor="White" FontSize="12" Background="Transparent" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Clicked="btnAuxConnect_Clicked" Margin="1"/>
+
+        <!--EFFECTS PANEL-->
+
+        <Grid x:Name="pnlEffects" Grid.RowSpan ="2" Grid.ColumnSpan="2" IsVisible="false">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Frame Grid.Column="0" Grid.RowSpan="2">
+                <StackLayout>
+                    <Button x:Name="btnAux1Strobe" Grid.Row="0" Grid.Column="0" Background="Transparent" TextColor="DarkGoldenrod" Text="\| AUX 1 Strobe|/" FontAttributes="Bold" FontSize="Large" IsVisible="False" Clicked="btnAux1Off_Clicked"/>
+
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Column="1" Grid.RowSpan="2">
+                <StackLayout>
+
+                </StackLayout>
+            </Frame>
+
+
+        </Grid>
+        
+        
+    </Grid>
+
+</ContentView>
